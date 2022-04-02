@@ -11,6 +11,13 @@
 
 .grid-item {
     padding: 1em;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd; */
     text-align: center;
 }
+
+body {
+    background-image: url("https://www.pngkey.com/png/detail/588-5883884_etch-a-sketch-transparent.png");
+    background-size: cover;
+    background-repeat: no-repeat;   
+}
+
