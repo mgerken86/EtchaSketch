@@ -9,8 +9,6 @@ function makeGrid(rows, columns){
     //create the grid
     containerDiv.style.setProperty("--grid-rows", rows);
     containerDiv.style.setProperty("--grid-columns", columns);
-    containerDiv.style.width = "960px";
-    containerDiv.style.overflow = "hidden";
     for (i = 0; i < (rows * columns); i++) {
         let square = document.createElement("div");
         square.style.minHeight = "0";
@@ -46,7 +44,7 @@ function createSizeButton(){
     const buttonDiv = document.querySelector("#buttonDiv");
     const sizeButton = document.createElement("button");
     sizeButton.textContent = "Change Size";
-    sizeButton.style.margin = "20px";
+    sizeButton.style.margin = "10px";
     buttonDiv.appendChild(sizeButton);
 
     //add event listener and prompt user to reset grid size / throw error > 100
