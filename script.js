@@ -50,7 +50,7 @@ function createSizeButton(){
     //add event listener and prompt user to reset grid size / throw error > 100
     sizeButton.addEventListener('click', () => {
         document.querySelectorAll(".grid-item").forEach(e => e.remove());
-        userGridInput = prompt("Please select a size 1-100. Larger numbers create thinner pen lines.");
+        userGridInput = prompt("Choose a number 1-100. Smaller numbers make bigger drawing lines. Default value is 100");
     if(userGridInput > 100 || userGridInput < 1 || userGridInput == null){
         alert("Please choose a size between 1-100.");
         userGridInput = prompt("Please select a grid size 1-100");
