@@ -1,5 +1,5 @@
 const containerDiv = document.querySelector("#container");
-let userGridInput = 16;
+let userGridInput = 100;
 
 function makeGrid(rows, columns){
     //check for existing button and remove it if present
@@ -22,7 +22,7 @@ function makeGrid(rows, columns){
     createSizeButton();
 }
 
-makeGrid(16, 16);
+makeGrid(100, 100);
 
 function createResetButton(){
     const buttonDiv = document.querySelector("#buttonDiv");
@@ -50,9 +50,9 @@ function createSizeButton(){
     //add event listener and prompt user to reset grid size / throw error > 100
     sizeButton.addEventListener('click', () => {
         document.querySelectorAll(".grid-item").forEach(e => e.remove());
-        userGridInput = prompt("Please select a grid size 1-100");
+        userGridInput = prompt("Please select a size 1-100. Larger numbers create thinner pen lines.");
     if(userGridInput > 100 || userGridInput < 1 || userGridInput == null){
-        alert("Please choose a size between 1-100");
+        alert("Please choose a size between 1-100.");
         userGridInput = prompt("Please select a grid size 1-100");
     }
         rows = userGridInput;
